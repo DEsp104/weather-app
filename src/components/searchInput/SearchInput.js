@@ -1,13 +1,28 @@
 import { useState, useEfect } from 'react';
 import { SearchIcon } from "@heroicons/react/solid";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchWeatherForecast } from "../../redux/searchByZipCodeSlice";
 //import redux slice as well
 
 
 
 function Search() {
+  const [zipcode, setZipCode] = useState("10001");
+  const weather = useSelector((state) => state)
+    
+  console.log(weather)
+  
+  const dispatch = useDispatch();
+  // console.log(zipcode)
 
+  const getWeatherZipCode = (e) => {
+    e.preventDefault()
+    
+    
+    dispatch(fetchWeatherForecast({ zipcode }))
+
+    console.log("get weather...")
+  }
 
 
   return (
@@ -26,7 +41,7 @@ function Search() {
               id="searchInput"
               className="focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-full pl-10 sm:text-sm border-gray-300"
               placeholder="Zip Code"
-              // onChange={e => { setSearchTerm(e.target.value)} }
+              onChange={e => { setZipCode(e.target.value)} }
             />
             </div>
         </div>
@@ -35,13 +50,13 @@ function Search() {
             <button
                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-bold font-medium text-spring-wood-500 bg-vin-rouge-500 hover:bg-vin-rouge-700 focus:outline-none focus:ring-2 focus:ring-offset focus:ring-indigo-500"
                type="submit"
-                // onClick={
-                //   (e) => {
-                //     setShowModal(false)
+                onClick={
+                  (e) => {
+               
                 //     setAdd(true)
-                //     addBeverage(e)
-                //   }
-                // }
+                    getWeatherZipCode(e)
+                  }
+                }
             >
                 Search
             </button>

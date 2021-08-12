@@ -1,13 +1,10 @@
 import axios from "axios";
-import dotenv from 'dotenv';
-dotenv.config();
+require("dotenv").config();
 
 
 
-export async function getWeather() {
-    
-
-  const results = await axios.get(`${process.env.API_BASE_URL}/data/2.5/forecast?zip=${''},us&units=imperial&appid=${process.env.API_KEY}`).then((res) => {
+export async function getWeather({ zipcode }) {
+  const results = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/data/2.5/forecast?zip=${zipcode},us&units=imperial&appid=${process.env.REACT_APP_API_KEY}`).then((res) => {
     // console.log(res)
     return res.data;
   });
