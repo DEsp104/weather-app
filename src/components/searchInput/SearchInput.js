@@ -1,9 +1,15 @@
-import React from 'react'
-import {SearchIcon} from "@heroicons/react/solid"
+import { useState, useEfect } from 'react';
+import { SearchIcon } from "@heroicons/react/solid";
+import { useDispatch } from 'react-redux';
+import { fetchWeatherForecast } from "../../redux/searchByZipCodeSlice";
+//import redux slice as well
 
 
 
 function Search() {
+
+
+
   return (
     <form className="space-y-6" action="#" method="POST">
       
