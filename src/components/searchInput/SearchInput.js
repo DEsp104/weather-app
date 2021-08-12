@@ -1,28 +1,29 @@
-import { useState, useEfect } from 'react';
+import { useState, useEffect } from 'react';
 import { SearchIcon } from "@heroicons/react/solid";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchWeatherForecast } from "../../redux/searchByZipCodeSlice";
-//import redux slice as well
 
 
 
 function Search() {
   const [zipcode, setZipCode] = useState("10001");
-  const weather = useSelector((state) => state)
-    
-  console.log(weather)
-  
+  const weather = useSelector((state) => state?.weather?.weatherForecast?.list)
   const dispatch = useDispatch();
-  // console.log(zipcode)
+
+  console.log(weather)
 
   const getWeatherZipCode = (e) => {
     e.preventDefault()
     
-    
-    dispatch(fetchWeatherForecast({ zipcode }))
-
-    console.log("get weather...")
+    if (zipcode.length > 0 && zipcode !== "10001")  {
+      dispatch(fetchWeatherForecast({ zipcode }))
+      console.log(weather)
+    }
   }
+
+  useEffect(() => {
+    dispatch(fetchWeatherForecast({ zipcode }))
+  }, [])
 
 
   return (
@@ -36,7 +37,7 @@ function Search() {
                 <SearchIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
             </div>
             <input
-              type="text"
+              type="number"
               name="searchInput"
               id="searchInput"
               className="focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-full pl-10 sm:text-sm border-gray-300"
