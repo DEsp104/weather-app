@@ -21,19 +21,20 @@ function Forecast() {
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
   const date = offSetTime.toLocaleTimeString('en-US', options);
 
+  
 
 
   return (
     <div className="mx-auto p-4 bg-purple-400 h-screen flex justify-center">
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap mt-20">
         <div className="w-full px-2">
-          <div className="bg-gray-900 text-white relative min-w-0 break-words rounded-lg overflow-hidden shadow-sm mb-4 w-full bg-white dark:bg-gray-600">
+          <div className="bg-gray-transparent-500 text-white relative min-w-0 break-words rounded-lg overflow-hidden shadow-sm mb-4 w-full bg-white dark:bg-gray-600">
             <div className="px-6 py-6 relative">
               <div className="flex mb-4 justify-between items-center">
                 <div>
                     <h5 className="mb-0 font-medium text-xl text-soapstone-500">{ locationInfo?.city?.name }</h5>
-                    <h6 className="mb-0 text-soapstone-500">{ date }</h6><small className="text-soapstone-500">Cloudy</small>
-                  
+                    <h6 className="mb-0 text-soapstone-500">{ date }</h6><small className="text-soapstone-500">{todayWeather?.weather[0]?.main}</small>
+                    <img src={`http://openweathermap.org/img/wn/${todayWeather?.weather[0]?.icon}@2x.png`} />
                 </div>
                 <div className="text-right">
                             <h3 className="font-bold text-4xl mb-0 text-soapstone-500"><span>{ Math.floor(todayWeather?.main?.temp) }°</span></h3>
@@ -55,27 +56,26 @@ function Forecast() {
               </div>
             </div>
 
-            <div class="divider table mx-2 text-center bg-transparent whitespace-nowrap text-soapstone-500">
-              <span class="inline-block px-3"><small>Forecast</small></span>
+            <div className="divider table mx-2 text-center bg-transparent whitespace-nowrap text-soapstone-500">
+              <span className="inline-block px-3"><small>Forecast</small></span>
             </div>
 
             
-            <div class="px-6 py-6 relative text-soapstone-500">
-              <div class="text-center justify-between items-center flex" style={{flexFlow: "initial"}}>
+            <div className="px-6 py-6 relative text-soapstone-500">
+              <div className="text-center justify-between items-center flex" style={{flexFlow: "initial"}}>
                 {
-                  list.filter((e, i) =>i % 8 === 8 - 1).map((day, index) => {
+                  list?.filter((value, index, Arr) => (index - 4) % 8 == 0).map((day, index) => {
 
                   const timeStamp = day.dt
                   const milliseconds = timeStamp * 1000
                   let dateObj = new Date(milliseconds)
                   let weekdays = dateObj.toLocaleString("en-US", { weekday: "long" })
                   
-                    console.log(weekdays)
-                    
-                    return <div class="text-center mb-0 flex items-center justify-center flex-col">
-                      <span class="block my-1">{weekdays}</span>
+        
+                    return <div key={index} className="text-center mb-0 flex items-center justify-center flex-col">
+                      <span className="block my-1">{weekdays}</span>
                     <img src={`http://openweathermap.org/img/wn/${day?.weather[0]?.icon}@2x.png`} />
-                      <span class="block my-1">{Math.floor(day?.main?.temp)}°</span>
+                      <span className="block my-1">{Math.floor(day?.main?.temp)}°</span>
                   </div>
                   })
                   

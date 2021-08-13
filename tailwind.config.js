@@ -44,6 +44,9 @@ module.exports = {
       "orange": {
         "500": "#e96e50"
       },
+      "gray-transparent":{
+        "500": "#111826c9"
+      }
      
     },
     spacing: {
