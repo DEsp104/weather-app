@@ -15,7 +15,7 @@ function Search() {
   const getWeatherZipCode = (e) => {
     e.preventDefault()
     
-    if (zipcode.length > 0 && zipcode !== "10001")  {
+    if (zipcode.length > 0)  {
       dispatch(fetchWeatherForecast({ zipcode }))
       console.log(weather)
     }
@@ -49,7 +49,7 @@ function Search() {
 
         <div className="flex items-center justify-center p-6 rounded-b">
             <button
-               className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-bold font-medium text-spring-wood-500 bg-vin-rouge-500 hover:bg-vin-rouge-700 focus:outline-none focus:ring-2 focus:ring-offset focus:ring-indigo-500"
+               className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-bold font-medium text-spring-wood-500 bg-orange-500 hover:bg-vin-rouge-700 focus:outline-none focus:ring-2 focus:ring-offset focus:ring-indigo-500"
                type="submit"
                 onClick={
                   (e) => {

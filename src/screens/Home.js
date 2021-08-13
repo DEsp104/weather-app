@@ -10,11 +10,12 @@ function Home() {
 
 
   return (
-    <div>
+    <div className="bg-dark-blue-100">
       <Header />
       <SearchInput />
-      <Forecast />
       <TodayWeather />
+      <Forecast />
+     
     </div>
   )
 }

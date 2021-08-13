@@ -35,8 +35,15 @@ module.exports = {
         '500': '#515155',
       },
       'spring-wood': {
-        '500': '#faf6ef',
-    }
+        '500': '#faf6ef', 
+      },
+      'dark-blue': {
+        '100': "#b8daf9",
+        '500': "#003c73",
+      },
+      "orange": {
+        "500": "#e96e50"
+      },
      
     },
     spacing: {
