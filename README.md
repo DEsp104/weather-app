@@ -4,33 +4,14 @@
 
 <p>Weather map will allow user to get weather information from around the world, including NYC. Users may type any zip code around the world allowing app to fetch weather conditions from that particular area. </p>
 
-<!-- ## <div align="left" style='color: #240046'> 🛠 Wireframing 🛠 </div> -->
-<!-- 
-| Logo                                                              |                                                                   |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| ![Beveraholic Logo](client/src/images/logos/beveraholic_logo.svg) | ![Beveraholic Logo](client/src/images/logos/beveraholic_icon.svg) |
-| logo                                                              | icon                                                              | -->
+## <div align="left" style='color: #240046'> 🛠 Instructions 🛠 </div>
 
-<!-- | Fonts                                                                    |
-| ------------------------------------------------------------------------ |
-| ![Beveraholic Fonts](src/images/design_elements/project-bloom-fonts.svg) | -->
-
-<!-- | Mockups                                                                   |                                                                         |                                                                         |
-| ------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| ![Beveraholic Desktop](client/src/images/wireframe/desktop_wireframe.png) | ![Beveraholic Tablet](client/src/images/wireframe/tablet_wireframe.png) | ![Beveraholic mobile](client/src/images/wireframe/mobile_wireframe.png) |
-| Desktop                                                                   | Tablet                                                                  | Mobile                                                                  | -->
-
-<!-- ## <div align="left" style='color: #240046'> 🖇 Component Hierarchy 🖇 </div>
-
-| ![Beveraholic Component Hierarchy](client/src/images/component-hierarchy/component_hierarchy.svg) |
-| ------------------------------------------------------------------------------------------------- |
-| component hierarchy                                                                               | -->
-
-<!-- ## <div align="left" style='color: #240046'> 🖇 Entity Relation Diagram 🖇 </div>
-
-| ![Beveraholic Component Hierarchy](client/src/images/erd/erd.svg) |
-| ----------------------------------------------------------------- |
-| Entity Relation Diagram                                           | -->
+1. Create **.env** file in the weather-app directory
+2. Create an account at https://api.openweathermap.org and get the API KEY.
+3. In the .env file create the following variables: **REACT_APP_API_KEY** and **REACT_APP_API_BASE_URL**
+4. Assign your API key to the  REACT_APP_API_KEY and https://api.openweathermap.org REACT_APP_API_BASE_URL
+5. Open this project on your code editor start your app by typing **yarn start**
+6. If you don't have yarn installed, type **yarn init** then **yarn start**
 
 ## <div align="left" style='color: #240046'> 🗄 Client 🗄 </div>
 

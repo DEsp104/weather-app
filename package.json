@@ -52,5 +52,6 @@
     "autoprefixer": "^9",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
-  }
+  },
+  "repository": "https://github.com/DEsp04/weather-app.git"
 }
