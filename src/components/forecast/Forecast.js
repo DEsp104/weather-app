@@ -64,7 +64,7 @@ function Forecast() {
             <div className="px-6 py-6 relative text-soapstone-500">
               <div className="text-center justify-between items-center flex" style={{flexFlow: "initial"}}>
                 {
-                  list?.filter((value, index, Arr) => (index - 4) % 8 == 0).map((day, index) => {
+                  list?.filter((value, index, Arr) => (index - 6) % 8 == 0).map((day, index) => {
 
                   const timeStamp = day.dt
                   const milliseconds = timeStamp * 1000
