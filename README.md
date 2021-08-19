@@ -10,8 +10,8 @@
 2. Create an account at https://api.openweathermap.org and get the API KEY.
 3. In the .env file create the following variables: **REACT_APP_API_KEY** and **REACT_APP_API_BASE_URL**
 4. Assign your API key to the  REACT_APP_API_KEY and https://api.openweathermap.org to REACT_APP_API_BASE_URL
-5. Open this project on your code editor start your app by typing **yarn start**
-6. If you don't have yarn installed, type **yarn init** then **yarn start**
+5. Open this project on your code editor and start your app by typing **yarn start** on the terminal
+6. If you don't have yarn installed, type **yarn init** on the terminal then **yarn start**
 
 ## <div align="left" style='color: #240046'> 🗄 Client 🗄 </div>
 
