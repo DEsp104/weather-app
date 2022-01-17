@@ -25,7 +25,7 @@ function Forecast() {
 
 
   return (
-    <div className="mx-auto p-4 bg-vivid-orange-500 h-screen flex justify-center">
+    <div className="mx-auto p-4 bg-pastel-orange-chalk-500 h-screen flex justify-center">
       <div className="flex flex-wrap mt-20">
         <div className="w-full px-2">
           <div className="bg-gray-transparent-500 text-white relative min-w-0 break-words rounded-lg overflow-hidden shadow-sm mb-4 w-full bg-white dark:bg-gray-600">

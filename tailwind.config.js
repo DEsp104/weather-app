@@ -49,6 +49,9 @@ module.exports = {
       },
       "vivid-orange":{
         "500": "#f0a40b"
+      },
+      "pastel-orange-chalk":{
+        "500": "#fad58b"
       }
      
     },

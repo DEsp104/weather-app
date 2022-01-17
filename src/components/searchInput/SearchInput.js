@@ -29,7 +29,7 @@ function Search() {
   return (
     <form className="space-y-6" action="#" method="POST">
       
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center bg-pastel-orange-chalk-500">
         <div className="search-input my-auto flex xs:flex-col xs:mx-4 xxs:flex-col xxs:mx-4 justify-center items-center rounded-md mb-12 w-1/2">
               <div className=" md:mx-10 mx-0 w-full relative flex items-stretch flex-grow focus-within:z-10">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
