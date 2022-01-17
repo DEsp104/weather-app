@@ -46,6 +46,9 @@ module.exports = {
       },
       "gray-transparent":{
         "500": "#111826c9"
+      },
+      "vivid-orange":{
+        "500": "#f0a40b"
       }
      
     },
